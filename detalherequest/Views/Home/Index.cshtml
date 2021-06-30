@@ -20,3 +20,32 @@
         <td>@ViewBag.LocalIpAddress</td>
     </tr>
 </table>
+
+<br />
+
+<b>Headers</b>
+
+@{
+    if (ViewBag.Headers != null)
+    {
+        <table>
+            @*<thead>
+                <tr>
+                    <td>Key</td>
+                    <td>Value</td>
+                </tr>
+            </thead>*@
+            <tbody>
+                @{
+                    foreach (var header in ViewBag.Headers)
+                    {
+                        <tr>
+                            <td>@header.Key</td>
+                            <td>@header.Value</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+}

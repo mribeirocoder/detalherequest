@@ -29,7 +29,7 @@ namespace detalherequest.Controllers
             ViewBag.Protocol = HttpContext.Request.Protocol;
             ViewBag.RemoteIpAddress = HttpContext.Connection.RemoteIpAddress;
             ViewBag.LocalIpAddress = HttpContext.Connection.LocalIpAddress;
-            
+            ViewBag.Headers = Request.Headers;
 
             return View();
         }
